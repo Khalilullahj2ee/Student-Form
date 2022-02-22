@@ -12,8 +12,9 @@
         android:layout_height="52dp"
         android:layout_marginTop="20dp"
         android:ems="10"
+        android:hint="Address"
         android:inputType="textPersonName"
-        android:text="Address"
+        android:text=" "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +28,7 @@
         android:ems="10"
         android:hint="Type your email"
         android:inputType="textPersonName"
-        android:text="E-mail"
+        android:text=" "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,9 +41,10 @@
         android:layout_height="52dp"
         android:layout_marginTop="20dp"
         android:ems="10"
+        android:hint="Phone Number"
         android:inputType="textPersonName"
         android:rotationX="27"
-        android:text="Phone Number"
+        android:text=" "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,18 +52,15 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="251dp"
-        android:layout_height="37dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Student Form"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.093" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/tf_name"
@@ -69,8 +68,9 @@
         android:layout_height="52dp"
         android:layout_marginTop="52dp"
         android:ems="10"
+        android:hint="Enter Your Name"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:text=" "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,12 +78,48 @@
 
     <Button
         android:id="@+id/reg_btn"
-        android:layout_width="142dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="48dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Submit"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:layout_editor_absoluteX="113dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="70dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:text="Gender"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tf_address" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/textView">
+
+
+        <RadioButton
+            android:id="@+id/radioMale"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="  Male"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/radioFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="   Female"
+
+            android:textSize="20dp" />
+    </RadioGroup>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
